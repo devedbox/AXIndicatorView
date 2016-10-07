@@ -57,6 +57,7 @@
 		DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXActivityIndicatorView.m; path = Classes/AXActivityIndicatorView.m; sourceTree = "<group>"; };
 		DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXBreachedAnnulusIndicatorView.h; path = Classes/AXBreachedAnnulusIndicatorView.h; sourceTree = "<group>"; };
 		DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXBreachedAnnulusIndicatorView.m; path = Classes/AXBreachedAnnulusIndicatorView.m; sourceTree = "<group>"; };
+		DCC101981DA7BA2200AF4D67 /* AXIndicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AXIndicatorView.h; path = Classes/AXIndicatorView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +151,7 @@
 		DC85D5661DA79BFB0076C9E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DCC101981DA7BA2200AF4D67 /* AXIndicatorView.h */,
 				DC85D5631DA79BF80076C9E6 /* AXActivityIndicatorView.h */,
 				DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */,
 				DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */,

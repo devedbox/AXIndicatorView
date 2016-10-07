@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => 'https://github.com/devedbox/AXIndicatorView.git', :tag => '0.0.1' }
   s.source_files  = 'AXIndicatorView/Classes/*.{h,m}'
-  s.public_header_files = 'AXIndicatorView/Classes/*.{h,m}'
   s.frameworks = 'UIKit', 'Foundation'
 
   s.requires_arc = true
