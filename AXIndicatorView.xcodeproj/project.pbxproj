@@ -15,6 +15,8 @@
 		DC85D5401DA79BAD0076C9E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC85D53E1DA79BAD0076C9E6 /* LaunchScreen.storyboard */; };
 		DC85D54B1DA79BAD0076C9E6 /* AXIndicatorViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D54A1DA79BAD0076C9E6 /* AXIndicatorViewTests.m */; };
 		DC85D5561DA79BAD0076C9E6 /* AXIndicatorViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5551DA79BAD0076C9E6 /* AXIndicatorViewUITests.m */; };
+		DC85D5651DA79BF80076C9E6 /* AXActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */; };
+		DC85D5691DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		DC85D5511DA79BAD0076C9E6 /* AXIndicatorViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AXIndicatorViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC85D5551DA79BAD0076C9E6 /* AXIndicatorViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AXIndicatorViewUITests.m; sourceTree = "<group>"; };
 		DC85D5571DA79BAD0076C9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC85D5631DA79BF80076C9E6 /* AXActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXActivityIndicatorView.h; path = Classes/AXActivityIndicatorView.h; sourceTree = "<group>"; };
+		DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXActivityIndicatorView.m; path = Classes/AXActivityIndicatorView.m; sourceTree = "<group>"; };
+		DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXBreachedAnnulusIndicatorView.h; path = Classes/AXBreachedAnnulusIndicatorView.h; sourceTree = "<group>"; };
+		DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXBreachedAnnulusIndicatorView.m; path = Classes/AXBreachedAnnulusIndicatorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				DC85D5341DA79BAD0076C9E6 /* AppDelegate.m */,
 				DC85D5361DA79BAD0076C9E6 /* ViewController.h */,
 				DC85D5371DA79BAD0076C9E6 /* ViewController.m */,
+				DC85D5661DA79BFB0076C9E6 /* Classes */,
 				DC85D5391DA79BAD0076C9E6 /* Main.storyboard */,
 				DC85D53C1DA79BAD0076C9E6 /* Assets.xcassets */,
 				DC85D53E1DA79BAD0076C9E6 /* LaunchScreen.storyboard */,
@@ -138,6 +145,17 @@
 				DC85D5571DA79BAD0076C9E6 /* Info.plist */,
 			);
 			path = AXIndicatorViewUITests;
+			sourceTree = "<group>";
+		};
+		DC85D5661DA79BFB0076C9E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DC85D5631DA79BF80076C9E6 /* AXActivityIndicatorView.h */,
+				DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */,
+				DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */,
+				DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC85D5381DA79BAD0076C9E6 /* ViewController.m in Sources */,
+				DC85D5691DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m in Sources */,
 				DC85D5351DA79BAD0076C9E6 /* AppDelegate.m in Sources */,
+				DC85D5651DA79BF80076C9E6 /* AXActivityIndicatorView.m in Sources */,
 				DC85D5321DA79BAD0076C9E6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +534,7 @@
 				DC85D55C1DA79BAD0076C9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC85D55D1DA79BAD0076C9E6 /* Build configuration list for PBXNativeTarget "AXIndicatorViewTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +543,7 @@
 				DC85D55F1DA79BAD0076C9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC85D5601DA79BAD0076C9E6 /* Build configuration list for PBXNativeTarget "AXIndicatorViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +552,7 @@
 				DC85D5621DA79BAD0076C9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
