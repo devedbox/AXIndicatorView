@@ -36,6 +36,10 @@
 @property(assign, nonatomic) int64_t drawingComponents;
 /// Animating.
 @property(assign, nonatomic) BOOL animating;
+/// Should gradient color index.
+@property(assign, nonatomic) BOOL shouldGradientColorIndex;
+/// Begin angle offset.
+@property(assign, nonatomic) CGFloat angleOffset;
 - (void)drawComponents;
 - (void)drawLineWithAngle:(CGFloat)angle context:(CGContextRef)context tintColor:(UIColor *)tintColor;
 @end
@@ -69,9 +73,6 @@
     [self initializer];
 }
 
-- (void)dealloc {
-}
-
 - (void)initializer {
     _lineWidth = 2.0;
     
@@ -84,14 +85,6 @@
     _colorIndexLayerView.frame = [self bounds];
 }
 
-- (void)drawComponents {
-    [_colorIndexLayerView drawComponents];
-}
-
-- (void)drawLineWithAngle:(CGFloat)angle context:(CGContextRef)context tintColor:(UIColor *)tintColor {
-    [_colorIndexLayerView drawLineWithAngle:angle context:context tintColor:tintColor];
-}
-
 #pragma mark - Getters
 - (_AXActivityIndicatorLayerView *)colorIndexLayerView {
     if (_colorIndexLayerView) return _colorIndexLayerView;
@@ -99,6 +92,9 @@
     _colorIndexLayerView.backgroundColor = [UIColor clearColor];
     _colorIndexLayerView.lineWidth = _lineWidth;
     _colorIndexLayerView.drawingComponents = _drawingComponents;
+    _colorIndexLayerView.animating = _animating;
+    _colorIndexLayerView.shouldGradientColorIndex = _shouldGradientColorIndex;
+    _colorIndexLayerView.angleOffset = _angleOffset;
     return _colorIndexLayerView;
 }
 
@@ -115,6 +111,16 @@
 - (void)setDrawingComponents:(int64_t)drawingComponents {
     _drawingComponents = MIN(12, drawingComponents);
     self.colorIndexLayerView.drawingComponents = _drawingComponents;
+}
+
+- (void)setShouldGradientColorIndex:(BOOL)shouldGradientColorIndex {
+    _shouldGradientColorIndex = shouldGradientColorIndex;
+    [self.colorIndexLayerView setShouldGradientColorIndex:_shouldGradientColorIndex];
+}
+
+- (void)setAngleOffset:(CGFloat)angleOffset {
+    _angleOffset = angleOffset;
+    [self.colorIndexLayerView setAngleOffset:_angleOffset];
 }
 
 - (void)setAnimating:(BOOL)animating {
@@ -154,6 +160,16 @@
     [self setNeedsDisplay];
 }
 
+- (void)setShouldGradientColorIndex:(BOOL)shouldGradientColorIndex {
+    _shouldGradientColorIndex = shouldGradientColorIndex;
+    [self setNeedsDisplay];
+}
+
+- (void)setAngleOffset:(CGFloat)angleOffset {
+    _angleOffset = angleOffset;
+    [self setNeedsDisplay];
+}
+
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     
@@ -166,7 +182,7 @@
     CGContextRef cxt = UIGraphicsGetCurrentContext();
     UIColor *tintColor = self.tintColor?:[UIColor blackColor];
     // Draw all the possilbe line using the proper tint color.
-    for (int64_t i = 0; i < _drawingComponents; i++) [self drawLineWithAngle:angle*i-M_PI_2 context:cxt tintColor:_animating?[tintColor colorWithAlphaComponent:((float)i)/12.0]:tintColor];
+    for (int64_t i = 0; i < _drawingComponents; i++) [self drawLineWithAngle:angle*i-M_PI_2+_angleOffset context:cxt tintColor:_animating&&_shouldGradientColorIndex?[tintColor colorWithAlphaComponent:((float)i)/12.0]:tintColor];
 }
 #pragma mark - Helper
 - (void)drawLineWithAngle:(CGFloat)angle context:(CGContextRef)context tintColor:(UIColor *)tintColor {
