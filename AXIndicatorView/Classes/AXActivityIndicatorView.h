@@ -32,12 +32,6 @@
 @property(assign, nonatomic) int64_t drawingComponents;
 /// Animating.
 @property(assign, nonatomic, getter=isAnimating) BOOL animating;
-/// Animated color index.
-@property(assign, nonatomic) int64_t animatedColorIndex;
-/// Shape layer.
-@property(strong, nonatomic) CADisplayLink *displayLink;
-/// Color index animation using core animation. Default is YES.
-@property(assign, nonatomic) BOOL usingCoreAnimation;
 
 - (void)initializer;
 - (void)drawComponents;
