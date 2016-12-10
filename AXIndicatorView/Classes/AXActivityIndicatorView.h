@@ -36,6 +36,8 @@
 @property(assign, nonatomic) int64_t animatedColorIndex;
 /// Shape layer.
 @property(strong, nonatomic) CADisplayLink *displayLink;
+/// Color index animation using core animation. Default is YES.
+@property(assign, nonatomic) BOOL usingCoreAnimation;
 
 - (void)initializer;
 - (void)drawComponents;

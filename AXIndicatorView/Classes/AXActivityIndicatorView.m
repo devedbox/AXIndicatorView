@@ -25,8 +25,9 @@
 
 #import "AXActivityIndicatorView.h"
 
-@interface AXActivityIndicatorView ()
-
+@interface AXActivityIndicatorView () <CAAnimationDelegate>
+/// Color index animation.
+@property(strong, nonatomic) CABasicAnimation *colorIndexAnimation;
 @end
 
 @implementation AXActivityIndicatorView
@@ -59,8 +60,14 @@
     [self initializer];
 }
 
+- (void)dealloc {
+    [_displayLink invalidate];
+    _displayLink = nil;
+}
+
 - (void)initializer {
     _lineWidth = 2.0;
+    _usingCoreAnimation = YES;
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -84,7 +91,7 @@
 }
 
 - (CADisplayLink *)displayLink {
-    return _displayLink;
+    return _usingCoreAnimation?nil:_displayLink;
 }
 
 #pragma mark - Setters
@@ -105,8 +112,12 @@
     if (animating) {
         [self addColorIndexAnimation];
     } else {
-        [self.displayLink invalidate];
-        self.displayLink = nil;
+        if (_usingCoreAnimation) {
+            [self.layer removeAnimationForKey:@"colorIndex"];
+        } else {
+            [self.displayLink invalidate];
+            self.displayLink = nil;
+        }
     }
 }
 
@@ -135,17 +146,21 @@
 }
 
 - (void)addColorIndexAnimation {
-    if (!self.displayLink) {
-        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(handleDisplayLink:)];
+    if (_usingCoreAnimation) {
+        _colorIndexAnimation = [CABasicAnimation animation];
+        _colorIndexAnimation.duration = 0.05;
+        _colorIndexAnimation.delegate = self;
+        [self.layer addAnimation:_colorIndexAnimation forKey:@"colorIndex"];
+    } else {
+        if (!self.displayLink) {
+            self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(handleDisplayLink:)];
+        }
+        [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+        self.displayLink.frameInterval = 3;
+        if ([self.displayLink respondsToSelector:@selector(setPreferredFramesPerSecond:)] && kCFCoreFoundationVersionNumber > kCFCoreFoundationVersionNumber_iOS_9_x_Max) {
+            self.displayLink.preferredFramesPerSecond = 20;
+        }
     }
-    [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0
-    self.displayLink.frameInterval = 3;
-#else
-    if ([self.displayLink respondsToSelector:@selector(setPreferredFramesPerSecond:)] && kCFCoreFoundationVersionNumber > kCFCoreFoundationVersionNumber_iOS_9_4) {
-        self.displayLink.preferredFramesPerSecond = 20;
-    }
-#endif
 }
 
 - (void)handleDisplayLink:(CADisplayLink *)sender {
@@ -153,5 +168,14 @@
         _animatedColorIndex = 0;
     }
     [self setAnimatedColorIndex:_animatedColorIndex];
+}
+
+#pragma mark - CAAnimationDelegate.
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    if (++_animatedColorIndex > 12) {
+        _animatedColorIndex = 0;
+    }
+    [self setAnimatedColorIndex:_animatedColorIndex];
+    if (_animating) [self addColorIndexAnimation];
 }
 @end
