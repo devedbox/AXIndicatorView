@@ -17,6 +17,8 @@
 		DC85D5561DA79BAD0076C9E6 /* AXIndicatorViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5551DA79BAD0076C9E6 /* AXIndicatorViewUITests.m */; };
 		DC85D5651DA79BF80076C9E6 /* AXActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */; };
 		DC85D5691DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */; };
+		DCABA0281EC83BBA005C7D31 /* AXIndicatorView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DCABA0271EC83BBA005C7D31 /* AXIndicatorView.bundle */; };
+		DCABA02B1EC83BE1005C7D31 /* AXSpinningWaitCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABA02A1EC83BE1005C7D31 /* AXSpinningWaitCursor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXActivityIndicatorView.m; path = Classes/AXActivityIndicatorView.m; sourceTree = "<group>"; };
 		DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXBreachedAnnulusIndicatorView.h; path = Classes/AXBreachedAnnulusIndicatorView.h; sourceTree = "<group>"; };
 		DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXBreachedAnnulusIndicatorView.m; path = Classes/AXBreachedAnnulusIndicatorView.m; sourceTree = "<group>"; };
+		DCABA0271EC83BBA005C7D31 /* AXIndicatorView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AXIndicatorView.bundle; path = Classes/AXIndicatorView.bundle; sourceTree = "<group>"; };
+		DCABA0291EC83BE1005C7D31 /* AXSpinningWaitCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXSpinningWaitCursor.h; path = Classes/AXSpinningWaitCursor.h; sourceTree = "<group>"; };
+		DCABA02A1EC83BE1005C7D31 /* AXSpinningWaitCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXSpinningWaitCursor.m; path = Classes/AXSpinningWaitCursor.m; sourceTree = "<group>"; };
 		DCC101981DA7BA2200AF4D67 /* AXIndicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AXIndicatorView.h; path = Classes/AXIndicatorView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				DCC101981DA7BA2200AF4D67 /* AXIndicatorView.h */,
+				DCABA0271EC83BBA005C7D31 /* AXIndicatorView.bundle */,
+				DCABA0291EC83BE1005C7D31 /* AXSpinningWaitCursor.h */,
+				DCABA02A1EC83BE1005C7D31 /* AXSpinningWaitCursor.m */,
 				DC85D5631DA79BF80076C9E6 /* AXActivityIndicatorView.h */,
 				DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */,
 				DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */,
@@ -272,6 +280,7 @@
 				DC85D5401DA79BAD0076C9E6 /* LaunchScreen.storyboard in Resources */,
 				DC85D53D1DA79BAD0076C9E6 /* Assets.xcassets in Resources */,
 				DC85D53B1DA79BAD0076C9E6 /* Main.storyboard in Resources */,
+				DCABA0281EC83BBA005C7D31 /* AXIndicatorView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +308,7 @@
 				DC85D5381DA79BAD0076C9E6 /* ViewController.m in Sources */,
 				DC85D5691DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m in Sources */,
 				DC85D5351DA79BAD0076C9E6 /* AppDelegate.m in Sources */,
+				DCABA02B1EC83BE1005C7D31 /* AXSpinningWaitCursor.m in Sources */,
 				DC85D5651DA79BF80076C9E6 /* AXActivityIndicatorView.m in Sources */,
 				DC85D5321DA79BAD0076C9E6 /* main.m in Sources */,
 			);
