@@ -25,17 +25,18 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface AXActivityIndicatorView : UIView
 /// Line width.
-@property(assign, nonatomic) CGFloat lineWidth;
+@property(assign, nonatomic) IBInspectable CGFloat lineWidth;
 /// Drawing percent of the components.
-@property(assign, nonatomic) int64_t drawingComponents;
+@property(assign, nonatomic) IBInspectable int64_t drawingComponents;
 /// Animating.
-@property(assign, nonatomic, getter=isAnimating) BOOL animating;
+@property(assign, nonatomic, getter=isAnimating) IBInspectable BOOL animating;
 /// Should gradient color index.
-@property(assign, nonatomic) BOOL shouldGradientColorIndex;
+@property(assign, nonatomic) IBInspectable BOOL shouldGradientColorIndex;
 /// Begin angle offset.
-@property(assign, nonatomic) CGFloat angleOffset;
+@property(assign, nonatomic) IBInspectable CGFloat angleOffset;
 
 - (void)initializer;
 @end

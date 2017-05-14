@@ -29,6 +29,7 @@
 /// Color index layer.
 @property(strong, nonatomic) _AXActivityIndicatorLayerView *colorIndexLayerView;
 @end
+IB_DESIGNABLE
 @interface _AXActivityIndicatorLayerView : UIView
 /// Line width.
 @property(assign, nonatomic) CGFloat lineWidth;
@@ -74,7 +75,10 @@
 }
 
 - (void)initializer {
-    _lineWidth = 2.0;
+    self.lineWidth = 3.0;
+    self.drawingComponents = 12;
+    self.angleOffset = -(M_PI * 2 / _drawingComponents)*2;
+    self.shouldGradientColorIndex = YES;
     
     [self addSubview:self.colorIndexLayerView];
 }
@@ -106,21 +110,37 @@
 - (void)setLineWidth:(CGFloat)lineWidth {
     _lineWidth = lineWidth;
     self.colorIndexLayerView.lineWidth = _lineWidth;
+    if (_animating) {
+        [_colorIndexLayerView.layer removeAnimationForKey:@"transform.rotation"];
+        [self addColorIndexAnimation];
+    }
 }
 
 - (void)setDrawingComponents:(int64_t)drawingComponents {
     _drawingComponents = MIN(12, drawingComponents);
     self.colorIndexLayerView.drawingComponents = _drawingComponents;
+    if (_animating) {
+        [_colorIndexLayerView.layer removeAnimationForKey:@"transform.rotation"];
+        [self addColorIndexAnimation];
+    }
 }
 
 - (void)setShouldGradientColorIndex:(BOOL)shouldGradientColorIndex {
     _shouldGradientColorIndex = shouldGradientColorIndex;
     [self.colorIndexLayerView setShouldGradientColorIndex:_shouldGradientColorIndex];
+    if (_animating) {
+        [_colorIndexLayerView.layer removeAnimationForKey:@"transform.rotation"];
+        [self addColorIndexAnimation];
+    }
 }
 
 - (void)setAngleOffset:(CGFloat)angleOffset {
     _angleOffset = angleOffset;
     [self.colorIndexLayerView setAngleOffset:_angleOffset];
+    if (_animating) {
+        [_colorIndexLayerView.layer removeAnimationForKey:@"transform.rotation"];
+        [self addColorIndexAnimation];
+    }
 }
 
 - (void)setAnimating:(BOOL)animating {
@@ -138,11 +158,11 @@
 - (void)addColorIndexAnimation {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
     NSMutableArray *values = [@[] mutableCopy];
-    for (int i = 0; i < 12; i++) {
-        [values addObject:@((i*M_PI/6)-M_PI_4)];
+    for (int i = 0; i < _drawingComponents; i++) {
+        [values addObject:@((i*M_PI/6)-M_PI_2+_angleOffset)];
     }
     animation.values = values;
-    animation.duration = 0.6;
+    animation.duration = 1.0;
     animation.repeatCount = CGFLOAT_MAX;
     animation.calculationMode = kCAAnimationDiscrete;
     [_colorIndexLayerView.layer addAnimation:animation forKey:@"transform.rotation"];
@@ -182,7 +202,7 @@
     CGContextRef cxt = UIGraphicsGetCurrentContext();
     UIColor *tintColor = self.tintColor?:[UIColor blackColor];
     // Draw all the possilbe line using the proper tint color.
-    for (int64_t i = 0; i < _drawingComponents; i++) [self drawLineWithAngle:angle*i-M_PI_2+_angleOffset context:cxt tintColor:_animating&&_shouldGradientColorIndex?[tintColor colorWithAlphaComponent:((float)i)/12.0]:tintColor];
+    for (int64_t i = 0; i < _drawingComponents; i++) [self drawLineWithAngle:angle*i-M_PI_2+_angleOffset context:cxt tintColor:/*_animating&&*/_shouldGradientColorIndex?[tintColor colorWithAlphaComponent:MAX(0.3, ((float)i)/_drawingComponents)]:tintColor];
 }
 #pragma mark - Helper
 - (void)drawLineWithAngle:(CGFloat)angle context:(CGContextRef)context tintColor:(UIColor *)tintColor {
@@ -190,7 +210,7 @@
     CGContextSetLineWidth(context, _lineWidth);
     CGContextSetLineCap(context, kCGLineCapRound);
     
-    CGRect box = CGRectInset(self.bounds, _lineWidth, _lineWidth);
+    CGRect box = CGRectInset(self.bounds, _lineWidth/2, _lineWidth/2);
     CGFloat deatla = MIN(box.size.width, box.size.height);
     box.origin.x += fabs(box.size.width-deatla)*.5;
     box.origin.y += fabs(box.size.height-deatla)*.5;
@@ -199,7 +219,8 @@
     
     // Get the begin point of the bounds.
     CGFloat radius = CGRectGetWidth(box)/2;
-    CGPoint beginPoint = CGPointMake(self.center.x-self.frame.origin.x+radius*0.5*cos(angle), self.center.y-self.frame.origin.y+radius*0.5*sin(angle));
+    CGFloat inner = radius * 0.5+_lineWidth/2;
+    CGPoint beginPoint = CGPointMake(self.center.x-self.frame.origin.x+inner*cos(angle), self.center.y-self.frame.origin.y+inner*sin(angle));
     CGPoint endPoint = CGPointMake(self.center.x-self.frame.origin.x+radius*cos(angle), self.center.y-self.frame.origin.y+radius*sin(angle));
     
     CGContextMoveToPoint(context, beginPoint.x, beginPoint.y);
