@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'AXIndicatorView'
-  s.version      = '0.0.5'
+  s.version      = '0.0.6'
   s.summary      = 'An indicator view manager kits.'
   s.description  = <<-DESC
                     An indicator view manager kits using on iOS platform.
@@ -14,7 +14,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
 
   s.source       = { :git => 'https://github.com/devedbox/AXIndicatorView.git', :tag => s.version }
-  s.source_files  = 'AXIndicatorView/Classes/*.{h,m}'
+  s.source_files = 'AXIndicatorView/Classes/*.{h,m}'
+  s.resource     = "AXIndicatorView/Classes/AXIndicatorView.bundle"
   s.frameworks = 'UIKit', 'Foundation'
 
   s.requires_arc = true
