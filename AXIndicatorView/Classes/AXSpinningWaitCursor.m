@@ -62,6 +62,11 @@
 - (void)initializer {
     _duration = 1.0;
     [self addSubview:self.imageView];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Override.
@@ -103,6 +108,10 @@
         [self.imageView.layer removeAnimationForKey:@"rotate"];
         [self _addAnimation];
     }
+}
+
+- (void)_didBecomeActive:(id)arg {
+    if (_animating) [self setAnimating:_animating];
 }
 
 - (void)_addAnimation {

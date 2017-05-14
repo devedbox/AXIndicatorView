@@ -59,6 +59,11 @@
     _lineWidth = 2.0;
     _breach = M_PI_4;
     _duration = 1.6;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Override
@@ -115,5 +120,9 @@
     } else {
         [self.layer removeAnimationForKey:@"rotate"];
     }
+}
+
+- (void)_didBecomeActive:(id)arg {
+    if (_animating) [self setAnimating:_animating];
 }
 @end

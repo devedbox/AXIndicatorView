@@ -81,6 +81,11 @@ IB_DESIGNABLE
     self.shouldGradientColorIndex = YES;
     
     [self addSubview:self.colorIndexLayerView];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didBecomActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)layoutSubviews {
@@ -154,6 +159,9 @@ IB_DESIGNABLE
 }
 
 #pragma mark - Helper
+- (void)didBecomActive:(id)noti {
+    if (_animating) [self setAnimating:_animating];
+}
 
 - (void)addColorIndexAnimation {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
@@ -165,6 +173,7 @@ IB_DESIGNABLE
     animation.duration = 1.0;
     animation.repeatCount = CGFLOAT_MAX;
     animation.calculationMode = kCAAnimationDiscrete;
+    animation.removedOnCompletion = NO;
     [_colorIndexLayerView.layer addAnimation:animation forKey:@"transform.rotation"];
 }
 @end

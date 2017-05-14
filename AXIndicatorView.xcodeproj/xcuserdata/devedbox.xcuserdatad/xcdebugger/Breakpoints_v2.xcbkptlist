@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AXIndicatorView/Classes/AXActivityIndicatorView.m"
-            timestampString = "516420306.429968"
+            timestampString = "516445957.573787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "-drawComponents"
             landmarkType = "7">
          </BreakpointContent>
