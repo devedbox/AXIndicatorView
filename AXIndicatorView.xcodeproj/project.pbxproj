@@ -17,6 +17,19 @@
 		DC85D5561DA79BAD0076C9E6 /* AXIndicatorViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5551DA79BAD0076C9E6 /* AXIndicatorViewUITests.m */; };
 		DC85D5651DA79BF80076C9E6 /* AXActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */; };
 		DC85D5691DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */; };
+		DC9975431F7E245F008FD921 /* AXIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC99753A1F7E245F008FD921 /* AXIndicatorView.framework */; };
+		DC99754A1F7E245F008FD921 /* AXIndicatorViewFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9975491F7E245F008FD921 /* AXIndicatorViewFrameworkTests.swift */; };
+		DC99754C1F7E245F008FD921 /* AXIndicatorViewFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = DC99753C1F7E245F008FD921 /* AXIndicatorViewFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC99754F1F7E245F008FD921 /* AXIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC99753A1F7E245F008FD921 /* AXIndicatorView.framework */; };
+		DC9975501F7E245F008FD921 /* AXIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC99753A1F7E245F008FD921 /* AXIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC9975581F7E249B008FD921 /* AXIndicatorView.h in Sources */ = {isa = PBXBuildFile; fileRef = DCC101981DA7BA2200AF4D67 /* AXIndicatorView.h */; };
+		DC9975591F7E249B008FD921 /* AXSpinningWaitCursor.h in Sources */ = {isa = PBXBuildFile; fileRef = DCABA0291EC83BE1005C7D31 /* AXSpinningWaitCursor.h */; };
+		DC99755A1F7E249B008FD921 /* AXSpinningWaitCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABA02A1EC83BE1005C7D31 /* AXSpinningWaitCursor.m */; };
+		DC99755B1F7E249B008FD921 /* AXActivityIndicatorView.h in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5631DA79BF80076C9E6 /* AXActivityIndicatorView.h */; };
+		DC99755C1F7E249B008FD921 /* AXActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */; };
+		DC99755D1F7E249B008FD921 /* AXBreachedAnnulusIndicatorView.h in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */; };
+		DC99755E1F7E249B008FD921 /* AXBreachedAnnulusIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */; };
+		DC99755F1F7E24A1008FD921 /* AXIndicatorView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DCABA0271EC83BBA005C7D31 /* AXIndicatorView.bundle */; };
 		DCABA0281EC83BBA005C7D31 /* AXIndicatorView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DCABA0271EC83BBA005C7D31 /* AXIndicatorView.bundle */; };
 		DCABA02B1EC83BE1005C7D31 /* AXSpinningWaitCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABA02A1EC83BE1005C7D31 /* AXSpinningWaitCursor.m */; };
 /* End PBXBuildFile section */
@@ -36,7 +49,42 @@
 			remoteGlobalIDString = DC85D52C1DA79BAD0076C9E6;
 			remoteInfo = AXIndicatorView;
 		};
+		DC9975441F7E245F008FD921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC85D5251DA79BAD0076C9E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC9975391F7E245E008FD921;
+			remoteInfo = AXIndicatorViewFramework;
+		};
+		DC9975461F7E245F008FD921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC85D5251DA79BAD0076C9E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC85D52C1DA79BAD0076C9E6;
+			remoteInfo = AXIndicatorView;
+		};
+		DC99754D1F7E245F008FD921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC85D5251DA79BAD0076C9E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC9975391F7E245E008FD921;
+			remoteInfo = AXIndicatorViewFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC9975561F7E245F008FD921 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DC9975501F7E245F008FD921 /* AXIndicatorView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DC85D52D1DA79BAD0076C9E6 /* AXIndicatorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AXIndicatorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +107,12 @@
 		DC85D5641DA79BF80076C9E6 /* AXActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXActivityIndicatorView.m; path = Classes/AXActivityIndicatorView.m; sourceTree = "<group>"; };
 		DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXBreachedAnnulusIndicatorView.h; path = Classes/AXBreachedAnnulusIndicatorView.h; sourceTree = "<group>"; };
 		DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXBreachedAnnulusIndicatorView.m; path = Classes/AXBreachedAnnulusIndicatorView.m; sourceTree = "<group>"; };
+		DC99753A1F7E245F008FD921 /* AXIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AXIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC99753C1F7E245F008FD921 /* AXIndicatorViewFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AXIndicatorViewFramework.h; sourceTree = "<group>"; };
+		DC99753D1F7E245F008FD921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC9975421F7E245F008FD921 /* AXIndicatorViewFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AXIndicatorViewFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC9975491F7E245F008FD921 /* AXIndicatorViewFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXIndicatorViewFrameworkTests.swift; sourceTree = "<group>"; };
+		DC99754B1F7E245F008FD921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCABA0271EC83BBA005C7D31 /* AXIndicatorView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AXIndicatorView.bundle; path = Classes/AXIndicatorView.bundle; sourceTree = "<group>"; };
 		DCABA0291EC83BE1005C7D31 /* AXSpinningWaitCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXSpinningWaitCursor.h; path = Classes/AXSpinningWaitCursor.h; sourceTree = "<group>"; };
 		DCABA02A1EC83BE1005C7D31 /* AXSpinningWaitCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXSpinningWaitCursor.m; path = Classes/AXSpinningWaitCursor.m; sourceTree = "<group>"; };
@@ -70,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC99754F1F7E245F008FD921 /* AXIndicatorView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +142,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC9975361F7E245E008FD921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC99753F1F7E245F008FD921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC9975431F7E245F008FD921 /* AXIndicatorView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +166,8 @@
 				DC85D52F1DA79BAD0076C9E6 /* AXIndicatorView */,
 				DC85D5491DA79BAD0076C9E6 /* AXIndicatorViewTests */,
 				DC85D5541DA79BAD0076C9E6 /* AXIndicatorViewUITests */,
+				DC99753B1F7E245F008FD921 /* AXIndicatorViewFramework */,
+				DC9975481F7E245F008FD921 /* AXIndicatorViewFrameworkTests */,
 				DC85D52E1DA79BAD0076C9E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +178,8 @@
 				DC85D52D1DA79BAD0076C9E6 /* AXIndicatorView.app */,
 				DC85D5461DA79BAD0076C9E6 /* AXIndicatorViewTests.xctest */,
 				DC85D5511DA79BAD0076C9E6 /* AXIndicatorViewUITests.xctest */,
+				DC99753A1F7E245F008FD921 /* AXIndicatorView.framework */,
+				DC9975421F7E245F008FD921 /* AXIndicatorViewFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,7 +242,36 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		DC99753B1F7E245F008FD921 /* AXIndicatorViewFramework */ = {
+			isa = PBXGroup;
+			children = (
+				DC99753C1F7E245F008FD921 /* AXIndicatorViewFramework.h */,
+				DC99753D1F7E245F008FD921 /* Info.plist */,
+			);
+			path = AXIndicatorViewFramework;
+			sourceTree = "<group>";
+		};
+		DC9975481F7E245F008FD921 /* AXIndicatorViewFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC9975491F7E245F008FD921 /* AXIndicatorViewFrameworkTests.swift */,
+				DC99754B1F7E245F008FD921 /* Info.plist */,
+			);
+			path = AXIndicatorViewFrameworkTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DC9975371F7E245E008FD921 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC99754C1F7E245F008FD921 /* AXIndicatorViewFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		DC85D52C1DA79BAD0076C9E6 /* AXIndicatorView */ = {
@@ -178,10 +281,12 @@
 				DC85D5291DA79BAD0076C9E6 /* Sources */,
 				DC85D52A1DA79BAD0076C9E6 /* Frameworks */,
 				DC85D52B1DA79BAD0076C9E6 /* Resources */,
+				DC9975561F7E245F008FD921 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DC99754E1F7E245F008FD921 /* PBXTargetDependency */,
 			);
 			name = AXIndicatorView;
 			productName = AXIndicatorView;
@@ -224,12 +329,50 @@
 			productReference = DC85D5511DA79BAD0076C9E6 /* AXIndicatorViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DC9975391F7E245E008FD921 /* AXIndicatorViewFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC9975551F7E245F008FD921 /* Build configuration list for PBXNativeTarget "AXIndicatorViewFramework" */;
+			buildPhases = (
+				DC9975351F7E245E008FD921 /* Sources */,
+				DC9975361F7E245E008FD921 /* Frameworks */,
+				DC9975371F7E245E008FD921 /* Headers */,
+				DC9975381F7E245E008FD921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AXIndicatorViewFramework;
+			productName = AXIndicatorViewFramework;
+			productReference = DC99753A1F7E245F008FD921 /* AXIndicatorView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC9975411F7E245F008FD921 /* AXIndicatorViewFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC9975571F7E245F008FD921 /* Build configuration list for PBXNativeTarget "AXIndicatorViewFrameworkTests" */;
+			buildPhases = (
+				DC99753E1F7E245F008FD921 /* Sources */,
+				DC99753F1F7E245F008FD921 /* Frameworks */,
+				DC9975401F7E245F008FD921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC9975451F7E245F008FD921 /* PBXTargetDependency */,
+				DC9975471F7E245F008FD921 /* PBXTargetDependency */,
+			);
+			name = AXIndicatorViewFrameworkTests;
+			productName = AXIndicatorViewFrameworkTests;
+			productReference = DC9975421F7E245F008FD921 /* AXIndicatorViewFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		DC85D5251DA79BAD0076C9E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = devedbox;
 				TargetAttributes = {
@@ -246,6 +389,17 @@
 					};
 					DC85D5501DA79BAD0076C9E6 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = TKA48YVS5T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC85D52C1DA79BAD0076C9E6;
+					};
+					DC9975391F7E245E008FD921 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = TKA48YVS5T;
+						ProvisioningStyle = Automatic;
+					};
+					DC9975411F7E245F008FD921 = {
+						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = TKA48YVS5T;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DC85D52C1DA79BAD0076C9E6;
@@ -268,6 +422,8 @@
 				DC85D52C1DA79BAD0076C9E6 /* AXIndicatorView */,
 				DC85D5451DA79BAD0076C9E6 /* AXIndicatorViewTests */,
 				DC85D5501DA79BAD0076C9E6 /* AXIndicatorViewUITests */,
+				DC9975391F7E245E008FD921 /* AXIndicatorViewFramework */,
+				DC9975411F7E245F008FD921 /* AXIndicatorViewFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,6 +448,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DC85D54F1DA79BAD0076C9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC9975381F7E245E008FD921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC99755F1F7E24A1008FD921 /* AXIndicatorView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC9975401F7E245F008FD921 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,6 +501,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC9975351F7E245E008FD921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC9975581F7E249B008FD921 /* AXIndicatorView.h in Sources */,
+				DC9975591F7E249B008FD921 /* AXSpinningWaitCursor.h in Sources */,
+				DC99755A1F7E249B008FD921 /* AXSpinningWaitCursor.m in Sources */,
+				DC99755B1F7E249B008FD921 /* AXActivityIndicatorView.h in Sources */,
+				DC99755C1F7E249B008FD921 /* AXActivityIndicatorView.m in Sources */,
+				DC99755D1F7E249B008FD921 /* AXBreachedAnnulusIndicatorView.h in Sources */,
+				DC99755E1F7E249B008FD921 /* AXBreachedAnnulusIndicatorView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC99753E1F7E245F008FD921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC99754A1F7E245F008FD921 /* AXIndicatorViewFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -342,6 +535,21 @@
 			isa = PBXTargetDependency;
 			target = DC85D52C1DA79BAD0076C9E6 /* AXIndicatorView */;
 			targetProxy = DC85D5521DA79BAD0076C9E6 /* PBXContainerItemProxy */;
+		};
+		DC9975451F7E245F008FD921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC9975391F7E245E008FD921 /* AXIndicatorViewFramework */;
+			targetProxy = DC9975441F7E245F008FD921 /* PBXContainerItemProxy */;
+		};
+		DC9975471F7E245F008FD921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC85D52C1DA79BAD0076C9E6 /* AXIndicatorView */;
+			targetProxy = DC9975461F7E245F008FD921 /* PBXContainerItemProxy */;
+		};
+		DC99754E1F7E245F008FD921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC9975391F7E245E008FD921 /* AXIndicatorViewFramework */;
+			targetProxy = DC99754D1F7E245F008FD921 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -459,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = TKA48YVS5T;
 				INFOPLIST_FILE = AXIndicatorView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
@@ -472,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = TKA48YVS5T;
 				INFOPLIST_FILE = AXIndicatorView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
@@ -531,6 +741,136 @@
 			};
 			name = Release;
 		};
+		DC9975511F7E245F008FD921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TKA48YVS5T;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AXIndicatorViewFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = devedbox.AXIndicatorViewFramework;
+				PRODUCT_NAME = AXIndicatorView;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DC9975521F7E245F008FD921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TKA48YVS5T;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AXIndicatorViewFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = devedbox.AXIndicatorViewFramework;
+				PRODUCT_NAME = AXIndicatorView;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DC9975531F7E245F008FD921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKA48YVS5T;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AXIndicatorViewFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = devedbox.AXIndicatorViewFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AXIndicatorView.app/AXIndicatorView";
+			};
+			name = Debug;
+		};
+		DC9975541F7E245F008FD921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKA48YVS5T;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AXIndicatorViewFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = devedbox.AXIndicatorViewFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AXIndicatorView.app/AXIndicatorView";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -566,6 +906,24 @@
 			buildConfigurations = (
 				DC85D5611DA79BAD0076C9E6 /* Debug */,
 				DC85D5621DA79BAD0076C9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC9975551F7E245F008FD921 /* Build configuration list for PBXNativeTarget "AXIndicatorViewFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC9975511F7E245F008FD921 /* Debug */,
+				DC9975521F7E245F008FD921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC9975571F7E245F008FD921 /* Build configuration list for PBXNativeTarget "AXIndicatorViewFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC9975531F7E245F008FD921 /* Debug */,
+				DC9975541F7E245F008FD921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
