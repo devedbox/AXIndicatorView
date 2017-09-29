@@ -30,6 +30,10 @@
 		DC99755D1F7E249B008FD921 /* AXBreachedAnnulusIndicatorView.h in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */; };
 		DC99755E1F7E249B008FD921 /* AXBreachedAnnulusIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85D5681DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.m */; };
 		DC99755F1F7E24A1008FD921 /* AXIndicatorView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DCABA0271EC83BBA005C7D31 /* AXIndicatorView.bundle */; };
+		DC9975821F7E2C0B008FD921 /* AXIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC101981DA7BA2200AF4D67 /* AXIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC9975831F7E2C0B008FD921 /* AXSpinningWaitCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = DCABA0291EC83BE1005C7D31 /* AXSpinningWaitCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC9975841F7E2C0B008FD921 /* AXActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC85D5631DA79BF80076C9E6 /* AXActivityIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC9975851F7E2C0B008FD921 /* AXBreachedAnnulusIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC85D5671DA7A00C0076C9E6 /* AXBreachedAnnulusIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DCABA0281EC83BBA005C7D31 /* AXIndicatorView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DCABA0271EC83BBA005C7D31 /* AXIndicatorView.bundle */; };
 		DCABA02B1EC83BE1005C7D31 /* AXSpinningWaitCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = DCABA02A1EC83BE1005C7D31 /* AXSpinningWaitCursor.m */; };
 /* End PBXBuildFile section */
@@ -268,6 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC99754C1F7E245F008FD921 /* AXIndicatorViewFramework.h in Headers */,
+				DC9975821F7E2C0B008FD921 /* AXIndicatorView.h in Headers */,
+				DC9975831F7E2C0B008FD921 /* AXSpinningWaitCursor.h in Headers */,
+				DC9975841F7E2C0B008FD921 /* AXActivityIndicatorView.h in Headers */,
+				DC9975851F7E2C0B008FD921 /* AXBreachedAnnulusIndicatorView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
